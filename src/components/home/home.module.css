@@ -1,0 +1,274 @@
+.contentHome {
+  background-color: #000000;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.contentRow {
+  background-color: #262626;
+  width: 240rem;
+  height: 25vh;
+  position: relative;
+  display: flex;
+}
+
+.contentRow img {
+  width: 12rem;
+  height: 25vh;
+  opacity: 0.1;
+  border: 0.1rem solid black;
+}
+
+.contentHome :nth-child(1) {
+  left: 0rem;
+}
+
+.ImageOne {
+  background-color: rgb(32, 31, 31);
+  width: 24rem;
+  height: 25rem;
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  animation: one 10s steps(1, start) 0s infinite alternate;
+}
+
+@keyframes one {
+  0% {
+    left: 0;
+  }
+  9% {
+    left: 24rem;
+  }
+  18% {
+    left: 48rem;
+  }
+  27% {
+    left: 60rem;
+  }
+  36% {
+    left: 84rem;
+  }
+  45% {
+    left: 108rem;
+  }
+  54% {
+    left: 84rem;
+  }
+  63% {
+    left: 60rem;
+  }
+  72% {
+    left: 36rem;
+  }
+  81% {
+    left: 24rem;
+  }
+  90% {
+    left: 12rem;
+  }
+  100% {
+    left: 0rem;
+  }
+}
+
+.contentHome :nth-child(2) {
+  right: 36rem;
+}
+
+.ImageTwo {
+  background-color: rgb(32, 31, 31);
+  width: 24rem;
+  height: 25rem;
+  position: absolute;
+  top: 0rem;
+  left: 120rem;
+  animation: two 10s steps(1, start) 0s infinite alternate;
+}
+
+@keyframes two {
+  0% {
+    left: 108rem;
+  }
+  9% {
+    left: 96rem;
+  }
+  18% {
+    left: 84rem;
+  }
+  27% {
+    left: 72rem;
+  }
+  36% {
+    left: 60rem;
+  }
+  45% {
+    left: 24rem;
+  }
+  54% {
+    left: 12rem;
+  }
+  63% {
+    left: 24rem;
+  }
+  72% {
+    left: 60rem;
+  }
+  81% {
+    left: 72rem;
+  }
+  90% {
+    left: 96rem;
+  }
+  100% {
+    left: 120rem;
+  }
+}
+
+.contentHome :nth-child(3) {
+  right: 84rem;
+}
+
+.ImageThree {
+  background-color: rgb(32, 31, 31);
+  width: 24rem;
+  height: 25rem;
+  position: absolute;
+  top: 0rem;
+  left: 72rem;
+  animation: three 10s steps(1, start) 0s infinite alternate;
+}
+
+@keyframes three {
+  0% {
+    left: 72rem;
+  }
+  9% {
+    left: 84rem;
+  }
+  18% {
+    left: 96rem;
+  }
+  27% {
+    left: 108rem;
+  }
+  36% {
+    left: 120rem;
+  }
+  45% {
+    left: 132rem;
+  }
+  54% {
+    left: 120rem;
+  }
+  63% {
+    left: 108rem;
+  }
+  72% {
+    left: 96rem;
+  }
+  81% {
+    left: 84rem;
+  }
+  90% {
+    left: 72rem;
+  }
+  100% {
+    left: 60rem;
+  }
+}
+
+.contentHome :nth-child(4) {
+  right: 96rem;
+}
+
+.ImageFour {
+  background-color: rgb(32, 31, 31);
+  width: 24rem;
+  height: 25rem;
+  position: absolute;
+  top: 0rem;
+  left: 216rem;
+  animation: four 10s steps(1, start) 0s infinite alternate;
+}
+
+@keyframes four {
+  0% {
+    left: 216rem;
+  }
+  9% {
+    left: 204rem;
+  }
+  18% {
+    left: 196rem;
+  }
+  27% {
+    left: 180rem;
+  }
+  36% {
+    left: 156rem;
+  }
+  45% {
+    left: 132rem;
+  }
+  54% {
+    left: 96rem;
+  }
+  63% {
+    left: 132rem;
+  }
+  72% {
+    left: 168rem;
+  }
+  81% {
+    left: 192rem;
+  }
+  90% {
+    left: 204rem;
+  }
+  100% {
+    left: 216rem;
+  }
+}
+
+/* .contentColumn {
+  background-color: rgba(0, 255, 34, 0.356);
+  width: 25%;
+  height: 100%;
+  border: 1px solid;
+  position: absolute;
+}
+
+.contentHome :nth-child(5) {
+  left: 0%;
+}
+
+.contentHome :nth-child(6) {
+  left: 50%;
+}
+ */
+
+.title {
+  color: rgba(242, 5, 5, 0.85);
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 900;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 0.5rem 0.5rem 1rem rgb(0, 0, 0);
+}
+
+.title h2 {
+  margin-top: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.title:hover > h2 {
+  color: rgba(242, 5, 5, 0.342);
+}

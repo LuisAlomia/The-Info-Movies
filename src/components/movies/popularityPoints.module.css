@@ -1,0 +1,33 @@
+.type {
+  margin-bottom: 0.2rem;
+  color: #4a4a4a;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 0.6rem;
+}
+
+.contentPopularity {
+  color: #4a4a4a;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.popularityText {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.6rem;
+}
+
+.contentPopularityVote {
+  display: flex;
+}
+
+.popularityVote {
+  background-color: #8d1d32;
+  color: transparent;
+  margin-left: 0.3rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+}

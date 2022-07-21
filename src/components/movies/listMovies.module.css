@@ -1,0 +1,66 @@
+.content {
+  width: 100%;
+  display: flex;
+}
+
+.container {
+  background-color: #262626;
+  padding: 1rem;
+  width: 100%;
+  box-shadow: 0 0 1rem 0 rgb(0, 0, 0);
+  z-index: 1;
+}
+
+.container h2 {
+  margin: 1rem 0 2rem 3rem;
+  color: #8d1d32;
+  text-transform: uppercase;
+}
+
+.movieList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 10rem);
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.movieItem {
+  text-decoration: none;
+}
+
+.movieDescription {
+  background-color: #262626;
+}
+
+/* responsive */
+
+@media (max-width: 770px) {
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .container {
+    margin-top: 58vh;
+  }
+
+  .container h2 {
+    margin: 0rem 0 0.5rem 1rem;
+    color: #8d1d32;
+    font-size: 1rem;
+  }
+
+  .movieList {
+    grid-template-columns: repeat(auto-fill, 8rem);
+    gap: 0.5rem;
+  }
+
+  .movieDescription {
+    width: 100%;
+    box-shadow: 0 0 1rem 0 rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+  }
+}

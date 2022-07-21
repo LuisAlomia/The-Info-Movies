@@ -1,0 +1,41 @@
+.card {
+  width: 7rem;
+  border-radius: 1rem 1rem 0 0;
+  cursor: pointer;
+}
+
+.contentImage {
+  width: 7rem;
+  height: 10rem;
+  border-radius: 1rem;
+}
+
+.cardImage {
+  width: 7rem;
+  height: 10rem;
+  object-fit: fill;
+  border-radius: 1rem;
+  opacity: 0.9;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.9);
+}
+
+.cardImage:hover {
+  opacity: 0.5;
+  transition: 500ms;
+}
+
+.cardNotImage {
+  padding-top: 4rem;
+  color: rgba(255, 255, 255, 0.548);
+  text-align: center;
+}
+
+.cardText {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.cardText h3 {
+  color: rgba(242, 5, 5, 0.356);
+  font-size: 0.8rem;
+}

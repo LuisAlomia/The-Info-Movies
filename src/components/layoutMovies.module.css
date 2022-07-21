@@ -1,0 +1,25 @@
+.contentMovies {
+  background-color: #262626;
+  display: flex;
+}
+
+.navBar {
+  z-index: 5;
+}
+
+.movies {
+  width: 100%;
+  z-index: 1;
+}
+
+/* medias */
+
+@media (max-width: 970px) {
+  .navBar {
+    position: fixed;
+  }
+
+  .movies {
+    margin-left: 4rem;
+  }
+}

@@ -1,0 +1,20 @@
+.recommendationsMovies {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 0.3rem;
+}
+
+/* media */
+
+@media (max-width: 770px) {
+  .recommendationsMovies {
+    width: 30rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 7rem));
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}

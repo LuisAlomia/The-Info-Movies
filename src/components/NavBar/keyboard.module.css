@@ -1,0 +1,29 @@
+.contentLetter {
+  width: 38rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.letter {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  border: 0.1rem solid #4a4a4a;
+  box-shadow: 0 0 1rem 0 rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #817e7e;
+  cursor: pointer;
+}
+
+.letterSpecial {
+  color: rgba(242, 5, 5, 0.85);
+}
+
+.letter:hover {
+  border: 0.1rem solid rgba(242, 5, 5, 0.85);
+  color: rgba(242, 5, 5, 0.85);
+}
