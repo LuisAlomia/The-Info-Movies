@@ -9,17 +9,47 @@
 
 .movies {
   width: 100%;
+  min-height: 100vh;
   z-index: 1;
+}
+
+.btnHidden {
+  display: none;
+}
+
+i {
+  color: white;
 }
 
 /* medias */
 
-@media (max-width: 970px) {
+@media (max-width: 770px) {
   .navBar {
-    position: fixed;
+    display: none;
   }
 
-  .movies {
+  .navBarMovil {
+    display: block;
+    position: fixed;
+    top: 0;
+  }
+
+  .moviesMovil {
     margin-left: 4rem;
+  }
+
+  .btnHidden {
+    display: block;
+    background-color: #f20505;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 500%;
+    box-shadow: 0 0 1rem 0rem rgb(0, 0, 0);
+    cursor: pointer;
+    z-index: 10;
+    position: fixed;
+    top: 1.5rem;
+    left: 1rem;
   }
 }

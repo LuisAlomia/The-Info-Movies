@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import style from "./MoviesDescription.module.css";
+import axios from "axios";
 import RecommendationsMovies from "./RecommendationsMovies";
+import style from "./MoviesDescription.module.css";
 
 const ApiKey = "e0d96126812fe95a55e7845d36dbfc18";
 const URLimage = "https://image.tmdb.org/t/p/w500";
@@ -12,11 +13,9 @@ const MoviesDescription = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${ApiKey}`)
-      .then((resp) => resp.json())
-      .then((resp) => {
-        setMovie(resp);
-      })
+    axios
+      .get(`https://api.themoviedb.org/3/movie/${id}?api_key=${ApiKey}`)
+      .then((resp) => setMovie(resp.data))
       .catch((err) => console.log(err));
   }, [id]);
 

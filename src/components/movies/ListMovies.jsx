@@ -10,6 +10,7 @@ const ListMovies = () => {
 
   return (
     <section className={style.content}>
+      <h2 className={style.selectMovie}>SELECT MOVIE</h2>
       <div className={style.container}>
         {genresMovies
           ?.filter((genre) => genre.id === idGenre)

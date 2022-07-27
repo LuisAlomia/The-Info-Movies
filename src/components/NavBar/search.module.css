@@ -54,7 +54,8 @@ form {
 
 @media (max-width: 750px) {
   .contentSearch {
-    height: 15vh; /* 58 */
+    height: 100vh; /* 58 */
+    width: 100vw;
     box-shadow: 0 0 1rem 0 rgb(0, 0, 0);
   }
 
@@ -63,19 +64,22 @@ form {
   }
 
   .contentSearch h2 {
+    font-size: 0.8rem;
     top: 1.8rem;
-    left: 2rem;
+    left: 1rem;
   }
 
   .input {
     margin-top: 4rem;
-    width: 100%;
+    width: 81%;
     height: 3rem;
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   .contentCradSearch {
-    display: none;
+    padding: 1rem 2rem 1rem 2rem;
+    margin: 1rem 3.5rem 0 0;
+    flex-wrap: wrap;
   }
 
   .Keyboard {

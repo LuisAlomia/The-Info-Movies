@@ -4,7 +4,7 @@ import Home from "../components/home/Home";
 import LayoutMovies from "../components/LayoutMovies";
 import MoviesDescription from "../components/movies/MoviesDescription";
 
-const AppRutes = () => {
+const MoviesRutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -16,4 +16,4 @@ const AppRutes = () => {
   );
 };
 
-export default AppRutes;
+export default MoviesRutes;

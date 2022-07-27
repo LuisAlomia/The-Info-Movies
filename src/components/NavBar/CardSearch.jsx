@@ -19,8 +19,33 @@ const CardSearch = ({ movie, setStateHidden, setRecommendationsHidden }) => {
   };
 
   return (
-    <figure onClick={handleNavigateMovie} className={style.card}>
-      <div className={style.contentImage}>
+    <>
+      {movie?.poster_path && (
+        <figure onClick={handleNavigateMovie} className={style.card}>
+          <div>
+            <div className={style.contentImage}>
+              {
+                <img
+                  className={style.cardImage}
+                  src={image}
+                  alt={movie.title}
+                />
+              }
+            </div>
+            <div className={style.cardText}>
+              <h3>{movie.name ? movie.name : movie.title}</h3>
+            </div>
+          </div>
+        </figure>
+      )}
+    </>
+  );
+};
+
+export default CardSearch;
+
+/* 
+ <div className={style.contentImage}>
         {movie?.poster_path ? (
           <img className={style.cardImage} src={image} alt={movie.title} />
         ) : (
@@ -30,8 +55,4 @@ const CardSearch = ({ movie, setStateHidden, setRecommendationsHidden }) => {
       <div className={style.cardText}>
         <h3>{movie.name ? movie.name : movie.title}</h3>
       </div>
-    </figure>
-  );
-};
-
-export default CardSearch;
+*/

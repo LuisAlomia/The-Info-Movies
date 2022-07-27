@@ -98,13 +98,15 @@
 @media (max-width: 770px) {
   .contentDecscription {
     width: 100%;
-    height: 58vh;
+    height: 59vh;
   }
 
   .imageDescription {
-    height: 58vh;
+    width: 100%;
+    height: 59vh;
     position: absolute;
     opacity: 0.2;
+    overflow: hidden;
   }
 
   .imageDescription img {
@@ -133,6 +135,7 @@
 
   .overview {
     margin: 2.5rem 5rem 1rem 0.2rem;
+    width: 98%;
   }
 
   .date {
@@ -148,7 +151,7 @@
 
   .btnRecommendations {
     top: -4.5rem;
-    right: 6rem;
+    right: 1.5rem;
   }
 
   .productionConten {
@@ -156,19 +159,12 @@
   }
 
   .recommendations {
-    width: calc(100% - 4rem);
-    height: 43vh;
+    width: 100%;
+    height: 100vh;
     box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.473);
     display: flex;
     justify-content: center;
-    align-items: center;
     top: 2.7rem;
     left: 0rem;
-  }
-}
-
-@media (max-width: 545px) {
-  .recommendations {
-    height: 70vh;
   }
 }

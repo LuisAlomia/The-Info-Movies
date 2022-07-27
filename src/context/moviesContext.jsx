@@ -44,12 +44,12 @@ const MoviesContextProvider = ({ children }) => {
   return (
     <MoviesContext.Provider
       value={{
+        setMovieSearch,
+        setIdGenre,
         movies,
         genresMovies,
-        idGenre,
-        setIdGenre,
         movieSearch,
-        setMovieSearch,
+        idGenre,
       }}
     >
       {children}

@@ -67,16 +67,12 @@ const Keyboard = ({ setLetterKeyboard, input, setInput, handleSubmit }) => {
       ))}
       <p
         onClick={deleteWord}
-        className={`${style.letter} ${style.letterSpecial} material-symbols-outlined`}
-      >
-        arrow_back
-      </p>
+        className={`${style.letter} ${style.letterSpecial} fa-solid fa-arrow-left`}
+      ></p>
       <p
         onClick={submit}
-        className={`${style.letter} ${style.letterSpecial}    material-symbols-outlined`}
-      >
-        subdirectory_arrow_left
-      </p>
+        className={`${style.letter} ${style.letterSpecial}    fa-solid fa-location-arrow`}
+      ></p>
     </div>
   );
 };

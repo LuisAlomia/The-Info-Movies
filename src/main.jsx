@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { HashRouter } from "react-router-dom";
-import AppRutes from "./routes/AppRutes";
 import MoviesContextProvider from "./context/moviesContext";
 import "./index.css";
+import Movies from "./Movies";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <MoviesContextProvider>
       <HashRouter>
-        <AppRutes />
+        <Movies />
       </HashRouter>
     </MoviesContextProvider>
   </React.StrictMode>

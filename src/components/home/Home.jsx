@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import style from "./home.module.css";
@@ -12,9 +13,9 @@ const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`${URLdiscover}${ApiKey}&page=${2}`)
-      .then((resp) => resp.json())
-      .then((resp) => setMoviesHome(resp.results));
+    axios
+      .get(`${URLdiscover}${ApiKey}&page=${2}`)
+      .then((resp) => setMoviesHome(resp.data.results));
   }, []);
 
   const handleNavigate = () => {
@@ -57,7 +58,9 @@ const Home = () => {
       </div>
       <div className={style.title}>
         <h1>welcome to movie info</h1>
-        <h2 onClick={handleNavigate}>start</h2>
+        <button className={style.button} onClick={handleNavigate}>
+          start
+        </button>
       </div>
     </div>
   );

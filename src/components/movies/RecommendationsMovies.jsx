@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
@@ -12,13 +13,11 @@ const RecommendationsMovies = ({ setRecommendationsHidden }) => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=${ApiKey}&language=en-US&page=1`
-    )
-      .then((resp) => resp.json())
-      .then((resp) => {
-        setMovies(resp.results);
-      });
+    axios
+      .get(
+        `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=${ApiKey}&language=en-US&page=1`
+      )
+      .then((resp) => setMovies(resp.data.results));
   }, [id]);
 
   return (
