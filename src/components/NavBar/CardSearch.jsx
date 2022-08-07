@@ -11,6 +11,7 @@ const CardSearch = ({ movie, setStateHidden, setRecommendationsHidden }) => {
 
   const handleNavigateMovie = () => {
     navigate(`/movies/${movie.id}`);
+
     if (setStateHidden) {
       setStateHidden(false);
     } else {
@@ -43,16 +44,3 @@ const CardSearch = ({ movie, setStateHidden, setRecommendationsHidden }) => {
 };
 
 export default CardSearch;
-
-/* 
- <div className={style.contentImage}>
-        {movie?.poster_path ? (
-          <img className={style.cardImage} src={image} alt={movie.title} />
-        ) : (
-          <h4 className={style.cardNotImage}>No results</h4>
-        )}
-      </div>
-      <div className={style.cardText}>
-        <h3>{movie.name ? movie.name : movie.title}</h3>
-      </div>
-*/

@@ -1,4 +1,3 @@
-import React from "react";
 import style from "./cardMovie.module.css";
 import PopularityPoints from "./PopularityPoints";
 

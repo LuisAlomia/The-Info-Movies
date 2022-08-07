@@ -35,20 +35,23 @@ const NavBar = () => {
           <Search stateHidden={stateHidden} setStateHidden={setStateHidden} />
         </div>
         <div className={style.nav}>
-          <span onClick={handleNavigate} className={`${style.navIcon}  `}>
+          <button onClick={handleNavigate} className={`${style.navIcon}  `}>
             <i className={`${style.icon} fa-solid fa-house`}></i>
-          </span>
-          <span onClick={handleHidenSearch} className={`${style.navIcon}  `}>
+          </button>
+          <button onClick={handleHidenSearch} className={`${style.navIcon}  `}>
             <i className={`${style.icon} fa-solid fa-magnifying-glass`}></i>
-          </span>
+          </button>
           {!movieSearch ? (
-            <span onClick={handleHiddenFilter} className={`${style.navIcon} `}>
+            <button
+              onClick={handleHiddenFilter}
+              className={`${style.navIcon} `}
+            >
               <i className={`${style.icon} fa-solid fa-filter`}></i>
-            </span>
+            </button>
           ) : (
-            <span onClick={btnBack} className={`${style.navIcon} `}>
+            <button onClick={btnBack} className={`${style.navIcon} `}>
               <i className={`${style.icon} fa-solid fa-arrow-left`}></i>
-            </span>
+            </button>
           )}
         </div>
         <div className={`${style.navItems} ${style.hidden}`} ref={hidden}>

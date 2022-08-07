@@ -1,23 +1,17 @@
-import React from "react";
-import axios from "axios";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { movieRecomendatioService } from "../../services/movieRecomendatioService";
 import CardSearch from "../NavBar/CardSearch";
 import style from "./recommendationsMovies.module.css";
-
-const ApiKey = "e0d96126812fe95a55e7845d36dbfc18";
 
 const RecommendationsMovies = ({ setRecommendationsHidden }) => {
   const [movies, setMovies] = useState();
   const { id } = useParams();
 
   useEffect(() => {
-    axios
-      .get(
-        `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=${ApiKey}&language=en-US&page=1`
-      )
-      .then((resp) => setMovies(resp.data.results));
+    movieRecomendatioService(id).then((resp) => {
+      setMovies(resp.results);
+    });
   }, [id]);
 
   return (

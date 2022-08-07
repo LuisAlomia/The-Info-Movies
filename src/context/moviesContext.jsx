@@ -1,12 +1,8 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import { createContext } from "react";
-import axios from "axios";
-
-const URLsearch = "https://api.themoviedb.org/3/search/movie?api_key=";
-const URLdiscover = "https://api.themoviedb.org/3/discover/movie?api_key=";
-
-const ApiKey = "e0d96126812fe95a55e7845d36dbfc18";
+import { moviesGenreService } from "../services/moviesGenreService";
+import { movieGenreIdService } from "../services/movieGenreIdService";
+import { movieSearchService } from "../services/movieSearchService";
 
 export const MoviesContext = createContext();
 
@@ -18,27 +14,14 @@ const MoviesContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (movieSearch) {
-      axios
-        .get(`${URLsearch}${ApiKey}&page=1&query=${movieSearch}`)
-        .then((resp) => {
-          setMovies(resp.data.results);
-        })
-        .catch((err) => console.log(err));
+      movieSearchService(movieSearch).then((resp) => setMovies(resp));
     } else {
-      axios
-        .get(`${URLdiscover}${ApiKey}&page=1&with_genres=${idGenre}`)
-        .then((resp) => {
-          setMovies(resp.data.results);
-        })
-        .catch((err) => console.log(err));
+      movieGenreIdService(idGenre).then((resp) => setMovies(resp));
     }
   }, [idGenre, movieSearch]);
 
   useEffect(() => {
-    axios
-      .get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${ApiKey}`)
-      .then((resp) => setGenresMovies(resp.data.genres))
-      .catch((err) => console.log(err));
+    moviesGenreService().then((resp) => setGenresMovies(resp));
   }, []);
 
   return (
