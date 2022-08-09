@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const ApiKey = "e0d96126812fe95a55e7845d36dbfc18";
 const URLdiscover = "https://api.themoviedb.org/3/discover/movie?api_key=";
+const ApiKey = import.meta.env.VITE_API_KEY;
 
 export const moviesHomeServices = () => {
   return axios
