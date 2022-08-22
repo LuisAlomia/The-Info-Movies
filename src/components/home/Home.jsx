@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import BackgroundMovie from "./BackgroundMovie";
+import title from "../../images/title.png";
 import style from "./home.module.css";
 
 const Home = () => {
@@ -29,9 +30,8 @@ const Home = () => {
         <BackgroundMovie row={rowFour} />
       </div>
       <div className={style.title}>
-        <h1>welcome to movie info</h1>
         <button className={style.button} onClick={handleNavigate}>
-          start
+          <img className={style.titleImg} src={title} alt="the movie info" />
         </button>
       </div>
     </div>
